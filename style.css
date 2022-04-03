@@ -1,0 +1,560 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,300&display=swap');
+
+
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    /*text-transform: capitalize;*/
+    transition: all .2s linear;
+    line-height: 1.5;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #e2e2e2;
+    padding-left: 30rem; /*SE CENTRAN EN EL MEDIO LA FRANJA*/
+}
+
+section {
+    padding: 1rem 5%; /*ABOUT Y FOTO SE DESPEJAN DE LA IZQUIERDA*/
+    min-height: 100vh;
+}
+
+.heading {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    color: #111;
+    padding-top: 3rem; /*agregue de mas*/
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem; /*ABOUT ME SE PONE MAS ADENTRO*/ 
+    color: #fff;
+    background: #0976ae;
+    cursor: pointer;
+    font-size: 1.7rem; /*TAMAÑO DE LOGO ABOUT ME*/
+}
+
+.btn:hover {
+    background: #111;
+}
+
+header {
+    position: fixed; /*POSICIÓN FIJA*/
+    top: 0; left: 0; bottom: 0; /*SE COLOCAN TODO EL CONTENIDO DE LA FRANJA A LA IZQUIERDA */
+    background: #222; /*COLOR DE LA FRANJA*/
+    display: flex; /*TODO EL CONTENIDO HORIZONTAL*/
+    align-items:center ; /*CONTENIDO EN EL CENTRO DE LA FRANJA*/
+    justify-content: space-between;
+    z-index: 1000;
+    flex-flow: column; /*TITULO BIEN ARRIBA, HOME, ABOUT EN EL CENTRO Y REDES BIEN ABAJO*/
+    padding: 8rem 2rem; /*ESPACIOS ENTRE TITULO, HOME, ABOUT Y REDES*/ 
+    width: 30rem; /*LO GRANDE DEL ANCHO DE LA FRANJA*/
+    text-align:center;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 2rem; /*SE AGRANDA EL TITULO*/
+}
+header .navbar a {
+    display: block; /*HOME, ABOUT SE PONEN EN BLOQUE, UNA ABAJO DEL OTRO*/
+    font-size: 1.7rem; /*TAMAÑO DE HOME, ABOUT*/
+    color: #fff; /*COLOR LETRAS HOME, ABOUT*/
+    margin: 2rem 0; /*ESPACIO ENTRE HOME, ABOUT, SERVICE (SE PUEDE PONER EN 1.5)*/
+    text-transform: uppercase;
+    font-family: 'Poppins';
+}
+
+header .navbar a:hover{
+    color:dodgerblue;
+}
+
+header .follow a{
+    font-size: 2.5rem; /*TAMAÑO DE LOS ICONOS DE REDES*/
+    color: #fff;
+    margin: 0 .7rem; /*SEPARACION ENTRE ICONOS, EL ESPACIO QUE TIENEN DEL OTRO*/
+}
+
+header .follow a:hover {
+    color: dodgerblue;
+}
+
+#menu-bars{
+    position: fixed;
+    top: 1rem; right: 1rem; /*UBICACIÓN Y ESPACIO A LOS COSTADOS*/
+    z-index: 10000;
+    background:slateblue ; /*COLOR DEL LOGO CUANDO ES RESPONSIVE*/
+    color: #fff;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem; /*EL CONTORNO DEL LOGO CUADRADO*/
+    font-size: 3rem; /*TAMAÑO DEL CUADRADO RESPONSIVE*/
+    cursor: pointer;
+    display: none; /*DESAPARECE CUANDO ESTAMOS EN PC Y EN MOVIL APARECE*/
+} 
+
+
+.home {
+    display: flex; /*LA IMG SE COLOCA HORIZONTAL AL COSTADO DE ABOUT*/
+    align-items: center; /*INFO ABOUT Y FOTO SE PONEN EN EL CENTRO*/
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .image {
+    flex:1 1 40rem;
+}
+
+.home .image img {
+    width:100% ;
+}
+
+.home .content {
+    flex:1 1 40rem;
+}
+
+.home .content .hi {
+    font-size: 2rem;
+    /*AGREGAR COLOR SI QUIERO*/
+}
+
+.home .content h3 {
+    font-size:4rem;
+    color: #111;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home .content .info{
+    font-size: 2rem;
+    color: #111;
+    padding: .5rem 0; /*SEPARACION ENTRE SUBTITULO*/
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home .content .text {
+    font-size: 1.7rem;
+    color: #666;
+    padding: .5rem 0;
+}
+
+.about .row-1 {
+    display: flex; /*PONE LOS DATOS PERSONALES PEGADO A LA FOTO, LADO DERECHO*/
+    flex-wrap: wrap; /*LOS DATOS PERSONALES SE VUELVEL A PONER ABAJO DE LA FOTO*/
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.about .row-1 .image {
+    flex:1 1 25rem;
+}
+
+.about .row-1 .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 1rem solid #fff; /*CUADRADO BLANCO ALRREDEDOR DE LA IMAGEN*/
+    border-radius: .5rem;
+    box-shadow: 0 5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.about .row-1 .content {
+    flex:1 1 50rem;
+}
+
+.about .row-1 .content h3 {
+    color: #333;
+    font-size: 2.8rem;
+}
+
+.about .row-1 .content p {
+    color: #666;
+    font-size: 1.6rem;
+    padding: .5rem;
+}
+
+.about .row-1 .content .box-container {
+    display: flex; /*LAS DOS COLUMNAS DE INFO SE PONEN HORIZONTALES*/
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+.about .row-1 .content .box-container .box {
+    flex: 1 1 20rem; /*ESPACIOS ENTRE BOX DE INFO PERSONALES*/
+}
+
+.about .row-1 .content .box-container .box span {
+    color: mediumblue;
+}
+
+/*ME QUEDE EN 24:15 Min*/
+
+/*22:49 min*/
+
+
+.about .row-2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.about .row-2 .skills{
+    flex: 1 1 50rem; /*original 1 1 40*/
+}
+
+.about .row-2 .skills .progress{
+    padding: 1rem 0;
+}
+
+.about .row-2 .skills .progress h3{
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem 0;
+    font-size: 1.7rem;
+}
+
+.about .row-2 .skills .progress .bar{ /*CREAMOS LA BARRA DE SKILLS*/
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    height: 1rem;
+    border-radius: 50rem;
+}
+
+.about .row-2 .skills .progress .bar span{
+    display: block;
+    height: 100%;
+    background: slateblue;
+    border-radius:50rem;
+}
+
+/*CON ESTA PROPIEDAD LOGRAMOS QUE TENGA EL PORTAJE QUE DICE, EJ 95%*/
+.about .row-2 .skills .progress:nth-child(1) .bar span{
+    width: 95%;
+}
+
+.about .row-2 .skills .progress:nth-child(2) .bar span{
+    width: 70%;
+}
+
+.about .row-2 .skills .progress:nth-child(3) .bar span{
+    width: 30%;
+}
+
+.about .row-2 .skills .progress:nth-child(4) .bar span{
+    width: 60%;
+}
+
+.about .row-2 .skills .progress:nth-child(5) .bar span{
+    width: 50%;
+}
+
+
+/*FINALIZA LAS PROPIEDADES DE LA BARRA------------------------*/
+
+.about .row-2 .box-container{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.about .row-2 .box-container .box{
+    flex: 1 1 15rem;
+    background: #fff;
+    padding: 2rem; /*CUADRADO BLANCO*/
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    margin-left: 2rem;
+}
+
+.about .row-2 .box-container .box h3{
+    color: #000;
+    font-size: 2.5rem;
+}
+
+.about .row-2 .box-container .box p{
+    color: #666;
+    font-size: 1.5rem;
+    padding-top: .9rem;
+}
+
+.experience .box-container{
+    display: flex; /*EXPERIENCIA TODO HORIZONTAL*/
+    flex-wrap: wrap;
+}
+
+.experience .box-container .box{
+    position: relative;
+    flex: 1 1 33rem; /*3 SECCIONES DE EXPERIENCIA SE CORREN A LA DERECHA*/
+    border-left: .2rem solid royalblue;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.experience .box-container .box::before{
+    content: '';
+    position: absolute;
+    top: 0; left: -1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: royalblue;
+}
+
+.experience .box-container .box .content{
+    background: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.experience .box-container .box .content span{
+    color:#fff;
+    font-size: 1.5rem;
+    background: royalblue;
+    border-radius: 50rem;
+    padding: .4rem 1rem;
+}
+
+.experience .box-container .box .content h3{
+    font-size: 1.7rem;
+    padding: .5rem 0;
+}
+
+.experience .box-container .box .content p{
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    
+}
+
+/*13:55 min*/
+
+.portfolio .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.portfolio .box-container .box{
+    flex: 1 1 30rem;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    border: 1rem solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.portfolio .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio .box-container .box:hover img{
+    height: 70%;
+    width: 70%;
+}
+
+.portfolio .box-container .box h3{
+    position: absolute;
+    bottom:.5rem; left: 1rem;
+    font-size: 1.7rem;
+}
+
+.portfolio .box-container .box .icons{
+    position: absolute;
+    top: 1rem; right: 1rem;
+}
+
+.portfolio .box-container .box .icons a{
+    display: block;
+    height: 3.5rem;
+    width: 5.5rem;
+    border-radius: .5rem;
+    background:#fff;
+    color: #333;
+    font-size: 1.7rem;
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.portfolio .box-container .box .icons a:hover{
+    background: slateblue;
+    color: #fff;
+}
+
+.contact .icons-container{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;  
+    padding-bottom: 2rem; 
+}
+
+.contact .icons-container .icons{
+    flex: 1 1 15rem;
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.contact .icons-container .icons:hover{
+    background:#e2ebf0;
+}
+
+
+.contact .icons-container .icons a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+}
+
+.contact .icons-container .icons h3{
+    color: #000;
+    font-size: 1.8rem;
+    padding: .5rem 0;
+    font-family: 'Montserrat';
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row form{
+    flex: 1 1 55rem;
+    background: #fff;
+    padding: 0 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.contact .row .map{
+    flex: 1 1 25rem;
+    border-radius: 1rem solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.contact .row form .box,
+.contact .row form textarea{
+    width: 100%;
+    border-bottom: .1rem solid #333;
+    text-transform: none;
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.contact .row form .box:focus,
+.contact .row form textarea:focus{
+    border-color: royalblue;
+}
+
+.contact .row form .box::placeholder,
+.contact .row form textarea::placeholder{
+    text-transform: capitalize;
+}
+
+.contact .row form textarea{
+    height: 20rem; /*28*/
+    resize: none;
+}
+
+.contact .row form .btn{
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+footer{
+    font-size: 2rem;
+    padding: 2.5rem; 
+    text-align: center;
+    color: #fff;
+    background:#666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------RESPONSIVE--------------*/
+
+@media(max-width:991px) {
+    html {
+        font-size: 55%; /*LA FRANJA SE ACHICA UN POCO*/
+    }
+    
+    body {
+        padding: 0;
+    }
+
+    #menu-bars{
+        display: initial; /*APARECE EL LOGO CUADRADO RECIEN*/
+    }
+
+    header {
+        left: -120%;
+    }
+
+    header.active{
+        left: 0%;
+    }
+
+    .cursor-1,
+    .cursor-2 {
+        display: none;
+    }
+
+}
+
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .experience .box-container .box{
+        padding-right: 0;
+    }
+
+}
+
+
